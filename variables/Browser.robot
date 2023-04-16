@@ -1,0 +1,2 @@
+*** Variables ***
+${Browser}      firefox
