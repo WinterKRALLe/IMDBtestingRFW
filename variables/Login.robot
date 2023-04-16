@@ -1,3 +1,3 @@
 *** Variables ***
-${Username}     mymail@test.com
+${Username}     winterdbek@proton.me
 ${Password}     SkakalPesPresOves120
