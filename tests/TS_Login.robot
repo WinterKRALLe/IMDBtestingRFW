@@ -17,6 +17,7 @@ Login Test
     Click Element
     ...    //body/div[@id='wrapper']/div[@id='root']/div[@id='pagecontent']/div[@id='content-2-wide']/div[@id='signin-options']/div/div[1]/a[1]
     Login    ${Username}    ${Password}
-    #Page Should Contain    Welcome to Example
+
     Sleep    1s
+    Verify Valid Login
     Close Browser

@@ -1,18 +1,15 @@
 *** Settings ***
 Library     SeleniumLibrary    run_on_failure=Nothing
 Library     OperatingSystem
-
-
-*** Variables ***
-${ProhlizecChrome}      firefox
-${URL}                  https://www.imdb.com/
+Resource    ../variables/Browser.robot
+Resource    ../variables/URLs.robot
 
 
 *** Test Cases ***
 Pre-conditions - Otevři browser chrome a jdi na adresu
-    Open Browser    ${URL}    ${ProhlizecChrome}
+    Open Browser    ${URL}    ${Browser}
 
-TC_001 - Zkontroluj URL a proveď click event
+TC_1 Go to page
     Location Should Be    ${URL}
 
     Wait Until Element Is Visible    //h3[normalize-space()='Featured today']
