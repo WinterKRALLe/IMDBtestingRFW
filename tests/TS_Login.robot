@@ -7,7 +7,7 @@ Resource    ../keywords/Keywords.robot
 
 
 *** Test Cases ***
-Login Test
+TC_1 Valid Login Test
     Open Browser    ${URL}    ${Browser}
     Click Element
     ...    //a[@class='ipc-btn ipc-btn--single-padding ipc-btn--center-align-content ipc-btn--default-height ipc-btn--core-baseAlt ipc-btn--theme-baseAlt ipc-btn--on-textPrimary ipc-text-button imdb-header__signin-text']//span[@class='ipc-btn__text'][normalize-space()='Sign In']
