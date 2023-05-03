@@ -14,5 +14,7 @@ TC_1 Verify Homepage URL
     ${current_url}=    Get Location
     Should Be Equal As Strings    ${current_url}    ${URL}
 
+TC_2 Logo Redirection
+
 Post-conditions
     Close Browser
