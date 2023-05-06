@@ -27,6 +27,8 @@ TC_1 English Lang
     Page Should Contain Element    ${CarouselTitleEN}
     Page Should Contain Element    ${RecommendationEN}
     Page Should Contain Element    ${ExclusiveEN}
+    ${lang}=    Get Element Attribute    //html    lang
+    Should Contain    ${lang}    en
 
 TC_2 French Lang
     ${language}=    Get Text    css=label[for='nav-language-selector'] span.ipc-btn__text
@@ -38,6 +40,8 @@ TC_2 French Lang
     Page Should Contain Element    ${CarouselTitleFR}
     Page Should Contain Element    ${RecommendationFR}
     Page Should Contain Element    ${ExclusiveFR}
+    ${lang}=    Get Element Attribute    //html    lang
+    Should Contain    ${lang}    fr
 
 TC_3 German Lang
     ${language}=    Get Text    css=label[for='nav-language-selector'] span.ipc-btn__text
@@ -58,6 +62,8 @@ TC_4 German Lang Search
     Page Should Contain    ${text1}
     Page Should Contain    ${text2}
     Page Should Contain    ${text3}
+    ${lang}=    Get Element Attribute    //html    lang
+    Should Contain    ${lang}    de
 
 Post-conditions
     Close Browser

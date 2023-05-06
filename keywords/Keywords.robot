@@ -23,4 +23,10 @@ Open Menu
     Element Should Be Visible    //label[@id='imdbHeader-navDrawerOpen']
     Element Should Not Be Visible    //label[@title='Close Navigation Drawer']
     Click Element    //label[@id='imdbHeader-navDrawerOpen']
+    Sleep    .2
     Element Should Be Visible    //label[@title='Close Navigation Drawer']
+
+Close Menu
+    Element Should Be Visible    //label[@title='Close Navigation Drawer']
+    Click Element    //label[@title='Close Navigation Drawer']
+    Sleep    .2
