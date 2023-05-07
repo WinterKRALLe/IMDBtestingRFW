@@ -9,9 +9,6 @@ Resource    ../variables/Inputs.robot
 *** Variables ***
 ${ValidQuery} =         nobody
 ${InvalidQuery} =       fdsdfgSDsavs
-${formURL}              http://example.com/login
-${username}             admin
-${password}             test
 
 
 *** Test Cases ***

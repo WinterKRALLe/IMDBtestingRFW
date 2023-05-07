@@ -30,3 +30,8 @@ Close Menu
     Element Should Be Visible    //label[@title='Close Navigation Drawer']
     Click Element    //label[@title='Close Navigation Drawer']
     Sleep    .2
+
+Validate Element
+    [Arguments]    ${identifier}    ${value}
+    Page Should Contain Element    ${identifier}
+    Element Text Should Be    ${identifier}    ${value}
