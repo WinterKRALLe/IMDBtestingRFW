@@ -5,10 +5,11 @@ Library     SeleniumLibrary
 *** Keywords ***
 Login
     [Arguments]    ${login}    ${password}
-
+    Wait Until Element Is Enabled    //input[@id='signInSubmit']
     Input Text    //input[@id='ap_email']    ${login}
     Input Password    //input[@id='ap_password']    ${password}
     Click Button    //input[@id='signInSubmit']
+    Sleep    1s
 
 Verify Valid Login
     Wait Until Page Contains    Winter
