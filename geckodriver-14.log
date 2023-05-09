@@ -1,0 +1,20 @@
+1683626034241	geckodriver	INFO	Listening on 127.0.0.1:33195
+1683626034296	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "58395" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileKPRNuI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1683626034999	Marionette	INFO	Marionette enabled
+1683626035002	Marionette	INFO	Listening on port 41437
+Read port: 41437
+WebDriver BiDi listening on ws://127.0.0.1:58395
+1683626035173	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKPRNuI/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:58395/devtools/browser/21f698b4-9f8d-431b-8622-55605350eac9
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1683626307822	Marionette	INFO	Stopped listening on port 41437
