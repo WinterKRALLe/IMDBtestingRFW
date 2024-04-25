@@ -4,11 +4,12 @@ ________________________________________________________
     Manual Test Cases
 ________________________________________________________
 Keywords:
+    • Open Browser Clickout Cookies
     • Search Page
     • Verify Search Result
 ________________________________________________________
 Pre-conditions:
-    Open the browser and go to the home page.
+    Call the Open Browser Clickout Cookies keyword
 ________________________________________________________
 TC_1 Search Person
     • Search for a person and verify that the page is

@@ -4,11 +4,12 @@ ________________________________________________________
     Manual Test Cases
 ________________________________________________________
 Keywords:
+    • Open Browser Clickout Cookies
     • Login
     • Verify Valid Login
 ________________________________________________________
 Pre-conditions:
-    Open the browser and go to the home page.
+    Call the Open Browser Clickout Cookies keyword
     Click the Sign In anchor then click on the
     element that says Sign in with IMDB
 ________________________________________________________
@@ -89,7 +90,7 @@ ${empty}
 
 *** Test Cases ***
 Pre-conditions
-    Open Browser    ${URL}    ${Browser}
+    Open Browser Clickout Cookies
     Click Element    ${LinkToSignIn}
     Click Element    ${LoginWithImdb}
 

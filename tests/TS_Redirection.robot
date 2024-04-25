@@ -4,11 +4,12 @@ ________________________________________________________
     Manual Test Cases
 ________________________________________________________
 Keywords:
+    • Open Browser Clickout Cookies
     • Open Menu
     • Close Menu
 ________________________________________________________
 Pre-conditions:
-    Open the browser and go to the home page.
+    Call the Open Browser Clickout Cookies keyword
 ________________________________________________________
 TC_1: Verify Homepage URL
     • Verify if the page is the home page.
@@ -58,26 +59,26 @@ TC_5: Menu Link
     'Browse Movies by Genre'.
     3. Verify if the URL contains the word 'genre'.
 
-TC_6: Image Link
-    • Now the page should be on Genres.
-    • Clicking on an image element should redirect to
-    a specific page.
+# TC_6: Image Link
+#     • Now the page should be on Genres.
+#     • Clicking on an image element should redirect to
+#     a specific page.
 
-    1. Click on the image element.
-    2. Verify if the page contains the text
-    'Top 50 Crime Movies and TV Shows'.
+#     1. Click on the image element.
+#     2. Verify if the page contains the text
+#     'Top 50 Crime Movies and TV Shows'.
 
-TC_7: Icon Link
-    • Now the page should contain a list of 50 movies.
-    • Every movie has a title, an image, rating, and
-    clickable icon 'Add to Watchlist'.
+# TC_7: Icon Link
+#     • Now the page should contain a list of 50 movies.
+#     • Every movie has a title, an image, rating, and
+#     clickable icon 'Add to Watchlist'.
 
-    1. Wait until the page contains the first clickable icon.
-    2. Give it some time to load.
-    3. Click on the element.
-    4. The user is not logged in, so it redirects to
-    the signin page that should contain the title 'Sign in'.
-    5. Verify if the URL contains the word 'signin'.
+#     1. Wait until the page contains the first clickable icon.
+#     2. Give it some time to load.
+#     3. Click on the element.
+#     4. The user is not logged in, so it redirects to
+#     the signin page that should contain the title 'Sign in'.
+#     5. Verify if the URL contains the word 'signin'.
 ________________________________________________________
 Post-conditions:
     Close the browser.
@@ -126,7 +127,7 @@ TC_5 Menu Link
     Open Menu
     Click Element    //span[normalize-space()='Browse Movies by Genre']
     Location Should Contain    genre
-    
+
 
 Post-conditions
     Close Browser
