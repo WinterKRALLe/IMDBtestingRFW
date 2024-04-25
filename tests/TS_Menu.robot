@@ -7,7 +7,7 @@ Resource    ../keywords/Keywords.robot
 
 *** Test Cases ***
 Pre-conditions
-    Open Browser    ${URL}    ${Browser}
+    Open Browser Clickout Cookies
 
 TC_1 Open Menu
     Open Menu

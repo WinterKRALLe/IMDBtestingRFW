@@ -5,23 +5,23 @@ Resource    ../variables/URLs.robot
 Resource    ../variables/RadioButtons.robot
 Resource    ../variables/HomepageElements.robot
 Resource    ../variables/Inputs.robot
-
+Resource    ../keywords/Keywords.robot
 
 *** Variables ***
 ${text1} =      Regie
 ${text2} =      Drehbuch
 ${text3} =      Hauptbesetzung
 
+${expected_class} =    navbar__flyout--isVisible
 
 *** Test Cases ***
 Pre-conditions
-    Open Browser    ${URL}    ${Browser}
+    Open Browser Clickout Cookies
 
 TC_1 English Lang
-    ${language}=    Get Text    css=label[for='nav-language-selector'] span.ipc-btn__text
+    ${language}=    Get Text    ${LanguageSelector}
     IF    $language != "EN"
         Click Element    ${LanguageSelector}
-        Sleep    .1
         Click Element    ${EnglishLang}
     END
     Page Should Contain Element    ${CarouselTitleEN}
@@ -31,10 +31,9 @@ TC_1 English Lang
     Should Contain    ${lang}    en
 
 TC_2 French Lang
-    ${language}=    Get Text    css=label[for='nav-language-selector'] span.ipc-btn__text
+    ${language}=    Get Text    ${LanguageSelector}
     IF    $language != "FR"
         Click Element    ${LanguageSelector}
-        Sleep    .1
         Click Element    ${FrenchLang}
     END
     Page Should Contain Element    ${CarouselTitleFR}
@@ -44,11 +43,10 @@ TC_2 French Lang
     Should Contain    ${lang}    fr
 
 TC_3 German Lang
-    ${language}=    Get Text    css=label[for='nav-language-selector'] span.ipc-btn__text
+    ${language}=    Get Text    ${LanguageSelector}
     IF    $language != "DE"
-        Click Element    ${LanguageSelector}
-        Sleep    .1
-        Click Element    ${GermanLang}
+        Click Language Selector Safely    ${LanguageSelector}
+        Click Language Safely    ${GermanLang}
     END
     Page Should Contain Element    ${CarouselTitleDE}
     Page Should Contain Element    ${RecommendationDE}
@@ -67,3 +65,16 @@ TC_4 German Lang Search
 
 Post-conditions
     Close Browser
+
+*** Keywords ***
+Click Language Selector Safely
+    [Arguments]    ${selector}
+    Wait Until Element Is Visible    ${selector}
+    Scroll Element Into View    ${selector}
+    Click Element    ${selector}
+
+Click Language Safely
+    [Arguments]    ${language}
+    Wait Until Element Is Visible    ${language}
+    Scroll Element Into View    ${language}
+    Click Element    ${language}

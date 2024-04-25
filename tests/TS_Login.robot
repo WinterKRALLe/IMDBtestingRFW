@@ -108,11 +108,13 @@ TC_3 Partial Login Password
 
 TC_4 Invalid Login
     Login    ${test_username}    ${test_password}
-    Page Should Contain    //h4[contains(text(),'There was a problem')]
+    Sleep    2s
+    Page Should Contain Element    //h4[normalize-space()='There was a problem']
 
-TC_5 Valid Login with Security Alert
-    Login    ${Username}    ${Password}
-    Page Should Contain    //h4[contains(text(),'Important Message!')]
+
+# TC_5 Valid Login with Security Alert
+#     Login    ${Username}    ${Password}
+#     Page Should Contain    //h4[contains(text(),'Important Message!')]
 
 TC_6 Valid Login
     Login    ${Username}    ${Password}

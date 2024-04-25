@@ -8,13 +8,12 @@ Resource    ../keywords/Keywords.robot
 
 
 *** Variables ***
-${button}=
-...             /html/body/div[@id='__next']/main[@role='main']/div[@role='presentation']/div[@role='presentation']/div[@class='ipc-page-grid ipc-page-grid--bias-left sc-7404859-0 fCDMKW page-grid']/section[@class='ipc-page-section ipc-page-section--baseAlt ipc-page-grid__item ipc-page-grid__item--span-3']/div[@class='top-picks']/div[@class='sc-e3008202-0 cEWmPy']/div[@class='item-enter-done']/div[@role='group']/div[@class='ipc-sub-grid ipc-sub-grid--page-span-3 ipc-sub-grid--nowrap ipc-shoveler__grid']/div[1]/div[3]/button[1]
+${Watchlist_button}=    (//button[contains(@class, 'ipc-btn') and contains(@class, 'ipc-secondary-button') and contains(@class, 'ipc-btn--core-baseAlt') and contains(@class, 'ipc-btn--theme-baseAlt') and contains(@class, 'ipc-btn--on-accent2') and .//span[text()='Watchlist']])[1]
 
 
 *** Test Cases ***
 Pre-conditions
-    Open Browser    ${URL}    ${Browser}
+    Open Browser Clickout Cookies
 
 TC_1 Underline on Hover
     Open Menu
@@ -51,21 +50,23 @@ TC_5 Font Family
 TC_6 Menu Flex Wrap
     Open Menu
     ${flex_wrap}=    Get CSS Property Value
-    ...    //div[@role='presentation'][@class='sc-bYMpWt eTJhNm navlcl'][1]
+    ...    //div[@class='sc-iNiRlI dgDhwo navlcl']
     ...    flex-wrap
     Should Be Equal    ${flex_wrap}    wrap
     Close Menu
 
 TC_7 Button Border Radius
-    ${border_r}=    Get CSS Property Value    ${button}    border-radius
+    Execute Javascript    window.scrollTo(0, 2000);
+    Wait Until Element Is Visible    ${Watchlist_button}    timeout=10s
+    ${border_r}=    Get CSS Property Value    ${Watchlist_button}    border-radius
     Should Be Equal    ${border_r}    4px
 
 TC_8 Button Content Center
-    ${content_c}=    Get CSS Property Value    ${button}    justify-content
+    ${content_c}=    Get CSS Property Value    ${Watchlist_button}    justify-content
     Should Be Equal    ${content_c}    center
 
 TC_9 Button Cursor Pointer
-    ${content_c}=    Get CSS Property Value    ${button}    cursor
+    ${content_c}=    Get CSS Property Value    ${Watchlist_button}    cursor
     Should Be Equal    ${content_c}    pointer
 
 TC_10 Button Back to Top

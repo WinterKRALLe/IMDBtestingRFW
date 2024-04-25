@@ -1,14 +1,22 @@
 *** Settings ***
 Library     SeleniumLibrary
+Resource    ../variables/Browser.robot
+Resource    ../variables/URLs.robot
 
 
 *** Keywords ***
+Open Browser Clickout Cookies
+    Open Browser    ${URL}    ${Browser}
+    Wait Until Element Is Visible    //button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']
+    Click Button    //button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']
+    Wait Until Element Is Not Visible    //button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']
+
 Login
     [Arguments]    ${login}    ${password}
     Wait Until Element Is Enabled    //input[@id='signInSubmit']
     Input Text    //input[@id='ap_email']    ${login}
     Input Password    //input[@id='ap_password']    ${password}
-    Click Button    //input[@id='signInSubmit']
+    Click Element    //input[@id='signInSubmit']
     Sleep    1s
 
 Verify Valid Login

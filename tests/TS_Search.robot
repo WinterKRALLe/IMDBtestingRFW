@@ -1,9 +1,8 @@
 *** Settings ***
 Library     SeleniumLibrary
 Library     Collections
-Resource    ../variables/Browser.robot
-Resource    ../variables/URLs.robot
 Resource    ../variables/Inputs.robot
+Resource    ../keywords/Keywords.robot
 
 
 *** Variables ***
@@ -13,7 +12,7 @@ ${InvalidQuery} =       fdsdfgSDsavs
 
 *** Test Cases ***
 Pre-conditions
-    Open Browser    ${URL}    ${Browser}
+    Open Browser Clickout Cookies
 
 TC_1 Valid Search Query
     Input Text    ${Searchbar}    ${ValidQuery}

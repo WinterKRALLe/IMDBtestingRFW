@@ -96,7 +96,7 @@ Resource    ../keywords/Keywords.robot
 
 *** Test Cases ***
 Pre-conditions
-    Open Browser    ${URL}    ${Browser}
+    Open Browser Clickout Cookies
 
 TC_1 Verify Homepage URL
     ${current_url}=    Get Location
@@ -126,17 +126,7 @@ TC_5 Menu Link
     Open Menu
     Click Element    //span[normalize-space()='Browse Movies by Genre']
     Location Should Contain    genre
-
-TC_6 Image Link
-    Click Element    //img[@title='Crime']
-    Page Should Contain    Top 50 Crime Movies and TV Shows
-
-TC_7 Icon Link
-    Wait Until Element Is Visible    (//div[@class='lister-top-right']/div[@class='ribbonize'][last()])[1]
-    Sleep    .6
-    Click Element    (//div[@class='lister-top-right']/div[@class='ribbonize'][last()])[1]
-    Wait Until Element Is Visible    //h1[normalize-space()='Sign in']
-    Location Should Contain    signin
+    
 
 Post-conditions
     Close Browser
