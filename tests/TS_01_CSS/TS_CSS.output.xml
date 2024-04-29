@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on linux)" generated="2024-04-29T09:20:03.810308" rpa="false" schemaversion="5">
+<suite id="s1" name="TS CSS" source="/home/winter/robot/IMDBtestingRFW/tests/TS_CSS/TS_CSS.robot">
+<test id="s1-t1" name="Pre-conditions" line="92">
+<kw name="Open Browser Clickout Cookies" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:04.082399" level="INFO">Opening browser 'Chrome' to base url 'https://www.imdb.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-29T09:20:04.082058" elapsed="3.669662"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-29T09:20:07.752089" elapsed="0.160060"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:07.912563" elapsed="0.106884"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:08.020343" level="INFO">Clicking button '//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']'.</msg>
+<arg>//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:08.019829" elapsed="0.134919"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:08.155127" elapsed="0.490365"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:04.080977" elapsed="4.564822"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:04.080261" elapsed="4.565941"/>
+</test>
+<test id="s1-t2" name="TC_1 Underline on Hover" line="95">
+<kw name="Open Menu" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:08.695209" level="INFO">Element '//label[@id='imdbHeader-navDrawerOpen']' is displayed.</msg>
+<arg>//label[@id='imdbHeader-navDrawerOpen']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:08.648154" elapsed="0.047265"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:08.729357" level="INFO">Element '//label[@title='Close Navigation Drawer']' exists but is not displayed.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:08.695828" elapsed="0.033750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:08.730251" level="INFO">Clicking element '//label[@id='imdbHeader-navDrawerOpen']'.</msg>
+<arg>//label[@id='imdbHeader-navDrawerOpen']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:08.729924" elapsed="0.088624"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.019482" level="INFO">Slept 200 milliseconds.</msg>
+<arg>.2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-29T09:20:08.818924" elapsed="0.200819"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.053417" level="INFO">Element '//label[@title='Close Navigation Drawer']' is displayed.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.020184" elapsed="0.033461"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:08.647551" elapsed="0.406384"/>
+</kw>
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.082633" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.88")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.055604" elapsed="0.027130"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.098677" level="INFO">${prop_val} = none solid rgb(255, 255, 255)</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.083127" elapsed="0.015634"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:09.098956" elapsed="0.000143"/>
+</return>
+<msg time="2024-04-29T09:20:09.099415" level="INFO">${text_decoration} = none solid rgb(255, 255, 255)</msg>
+<var>${text_decoration}</var>
+<arg>//a[./span[text()='Top 250 Movies']]</arg>
+<arg>text-decoration</arg>
+<status status="PASS" start="2024-04-29T09:20:09.054705" elapsed="0.044761"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.100233" level="INFO">Simulating Mouse Over on element '//a[./span[text()='Top 250 Movies']]'.</msg>
+<arg>//a[./span[text()='Top 250 Movies']]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.099865" elapsed="0.297800"/>
+</kw>
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.411707" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.88")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.398894" elapsed="0.012869"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.421151" level="INFO">${prop_val} = underline solid rgb(255, 255, 255)</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.412001" elapsed="0.009226"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:09.421405" elapsed="0.000106"/>
+</return>
+<msg time="2024-04-29T09:20:09.421793" level="INFO">${text_decoration_hover} = underline solid rgb(255, 255, 255)</msg>
+<var>${text_decoration_hover}</var>
+<arg>//a[./span[text()='Top 250 Movies']]</arg>
+<arg>text-decoration</arg>
+<status status="PASS" start="2024-04-29T09:20:09.398262" elapsed="0.023575"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text_decoration_hover}</arg>
+<arg>underline</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.422191" elapsed="0.000324"/>
+</kw>
+<kw name="Close Menu" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.453165" level="INFO">Element '//label[@title='Close Navigation Drawer']' is displayed.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.423332" elapsed="0.029996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.453978" level="INFO">Clicking element '//label[@title='Close Navigation Drawer']'.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.453652" elapsed="0.086779"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.741143" level="INFO">Slept 200 milliseconds.</msg>
+<arg>.2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.540697" elapsed="0.200679"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:09.422886" elapsed="0.318704"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:08.646677" elapsed="1.095284"/>
+</test>
+<test id="s1-t3" name="TC_2 Text Color" line="108">
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.768242" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.105")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.743810" elapsed="0.024529"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.794464" level="INFO">${prop_val} = rgba(245, 197, 24, 1)</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.768716" elapsed="0.025834"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:09.794735" elapsed="0.000110"/>
+</return>
+<msg time="2024-04-29T09:20:09.795094" level="INFO">${color} = rgba(245, 197, 24, 1)</msg>
+<var>${color}</var>
+<arg>//h3[normalize-space()='Featured today']</arg>
+<arg>color</arg>
+<status status="PASS" start="2024-04-29T09:20:09.743206" elapsed="0.051926"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.795852" level="INFO">rgba(245, 197, 24, 1)</msg>
+<arg>${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.795575" elapsed="0.000345"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${color}</arg>
+<arg>rgba(245, 197, 24, 1)</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.796132" elapsed="0.000207"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:09.742442" elapsed="0.054111"/>
+</test>
+<test id="s1-t4" name="TC_3 Font Size" line="115">
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.813181" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.105")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.798199" elapsed="0.015047"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.827996" level="INFO">${prop_val} = 32px</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.813520" elapsed="0.014554"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:09.828247" elapsed="0.000104"/>
+</return>
+<msg time="2024-04-29T09:20:09.828617" level="INFO">${font_size} = 32px</msg>
+<var>${font_size}</var>
+<arg>//h3[normalize-space()='Featured today']</arg>
+<arg>font-size</arg>
+<status status="PASS" start="2024-04-29T09:20:09.797450" elapsed="0.031214"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${font_size}</arg>
+<arg>32px</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.829088" elapsed="0.000389"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:09.796889" elapsed="0.032889"/>
+</test>
+<test id="s1-t5" name="TC_4 Font Weight" line="119">
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.850482" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.105")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.831358" elapsed="0.019187"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.866735" level="INFO">${prop_val} = 500</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.850829" elapsed="0.015967"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:09.866937" elapsed="0.000089"/>
+</return>
+<msg time="2024-04-29T09:20:09.867216" level="INFO">${font_weight} = 500</msg>
+<var>${font_weight}</var>
+<arg>//h3[normalize-space()='Featured today']</arg>
+<arg>font-weight</arg>
+<status status="PASS" start="2024-04-29T09:20:09.830794" elapsed="0.036449"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${font_weight}</arg>
+<arg>500</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.867530" elapsed="0.000288"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:09.830170" elapsed="0.037821"/>
+</test>
+<test id="s1-t6" name="TC_5 Font Family" line="123">
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.885332" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.105")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.869026" elapsed="0.016385"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:09.901137" level="INFO">${prop_val} = Roboto, Helvetica, Arial, sans-serif</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.885731" elapsed="0.015482"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:09.901380" elapsed="0.000098"/>
+</return>
+<msg time="2024-04-29T09:20:09.901721" level="INFO">${font_family} = Roboto, Helvetica, Arial, sans-serif</msg>
+<var>${font_family}</var>
+<arg>//h3[normalize-space()='Featured today']</arg>
+<arg>font-family</arg>
+<status status="PASS" start="2024-04-29T09:20:09.868698" elapsed="0.033068"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${font_family}</arg>
+<arg>Roboto</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.902068" elapsed="0.000193"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:09.868255" elapsed="0.034154"/>
+</test>
+<test id="s1-t7" name="TC_6 Menu Flex Wrap" line="127">
+<kw name="Open Menu" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.935310" level="INFO">Element '//label[@id='imdbHeader-navDrawerOpen']' is displayed.</msg>
+<arg>//label[@id='imdbHeader-navDrawerOpen']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.903289" elapsed="0.032192"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.967753" level="INFO">Element '//label[@title='Close Navigation Drawer']' exists but is not displayed.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.935937" elapsed="0.032012"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:09.968624" level="INFO">Clicking element '//label[@id='imdbHeader-navDrawerOpen']'.</msg>
+<arg>//label[@id='imdbHeader-navDrawerOpen']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:09.968292" elapsed="0.073356"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-29T09:20:10.242631" level="INFO">Slept 200 milliseconds.</msg>
+<arg>.2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.041995" elapsed="0.200895"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:10.279491" level="INFO">Element '//label[@title='Close Navigation Drawer']' is displayed.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.243328" elapsed="0.036350"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:09.903029" elapsed="0.376838"/>
+</kw>
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:10.304993" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.106")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.280985" elapsed="0.024091"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:10.325237" level="INFO">${prop_val} = wrap</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.305390" elapsed="0.019932"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:10.325515" elapsed="0.000113"/>
+</return>
+<msg time="2024-04-29T09:20:10.325888" level="INFO">${flex_wrap} = wrap</msg>
+<var>${flex_wrap}</var>
+<arg>//div[@class='sc-iNiRlI dgDhwo navlcl']</arg>
+<arg>flex-wrap</arg>
+<status status="PASS" start="2024-04-29T09:20:10.280348" elapsed="0.045586"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${flex_wrap}</arg>
+<arg>wrap</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.326337" elapsed="0.000384"/>
+</kw>
+<kw name="Close Menu" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:10.353027" level="INFO">Element '//label[@title='Close Navigation Drawer']' is displayed.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.327498" elapsed="0.025725"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:10.354224" level="INFO">Clicking element '//label[@title='Close Navigation Drawer']'.</msg>
+<arg>//label[@title='Close Navigation Drawer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.353635" elapsed="0.051483"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-29T09:20:10.606053" level="INFO">Slept 200 milliseconds.</msg>
+<arg>.2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.405421" elapsed="0.201067"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:10.327068" elapsed="0.279706"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:09.902642" elapsed="0.704526"/>
+</test>
+<test id="s1-t8" name="TC_7 Button Border Radius" line="135">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:10.609076" level="INFO">Executing JavaScript:
+window.scrollTo(0, 2000);
+Without any arguments.</msg>
+<arg>window.scrollTo(0, 2000);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.608329" elapsed="0.008340"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Watchlist_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:10.617120" elapsed="1.297831"/>
+</kw>
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:11.957187" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.127")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:11.915956" elapsed="0.041306"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:12.054823" level="INFO">${prop_val} = 4px</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:11.957589" elapsed="0.097334"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:12.055130" elapsed="0.000115"/>
+</return>
+<msg time="2024-04-29T09:20:12.055527" level="INFO">${border_r} = 4px</msg>
+<var>${border_r}</var>
+<arg>${Watchlist_button}</arg>
+<arg>border-radius</arg>
+<status status="PASS" start="2024-04-29T09:20:11.915426" elapsed="0.140147"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${border_r}</arg>
+<arg>4px</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.055981" elapsed="0.000419"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:10.607654" elapsed="1.449026"/>
+</test>
+<test id="s1-t9" name="TC_8 Button Content Center" line="141">
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:12.095527" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.127")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.058399" elapsed="0.037200"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:12.111243" level="INFO">${prop_val} = center</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.095875" elapsed="0.015434"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:12.111452" elapsed="0.000081"/>
+</return>
+<msg time="2024-04-29T09:20:12.111764" level="INFO">${content_c} = center</msg>
+<var>${content_c}</var>
+<arg>${Watchlist_button}</arg>
+<arg>justify-content</arg>
+<status status="PASS" start="2024-04-29T09:20:12.057858" elapsed="0.053950"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${content_c}</arg>
+<arg>center</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.112119" elapsed="0.000425"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:12.057129" elapsed="0.055659"/>
+</test>
+<test id="s1-t10" name="TC_9 Button Cursor Pointer" line="145">
+<kw name="Get CSS Property Value" owner="Keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:12.152777" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a3a90ddad16af9e8bceef0aad32e4de5", element="f.B8F620B32EAE9F1DE30F4E94B94E1154.d.E38D6658F144EDB458D1A5293B832DDE.e.127")&gt;</msg>
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.114219" elapsed="0.038637"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2024-04-29T09:20:12.288939" level="INFO">${prop_val} = pointer</msg>
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.153146" elapsed="0.135866"/>
+</kw>
+<return>
+<value>${prop_val}</value>
+<status status="PASS" start="2024-04-29T09:20:12.289128" elapsed="0.000067"/>
+</return>
+<msg time="2024-04-29T09:20:12.289355" level="INFO">${content_c} = pointer</msg>
+<var>${content_c}</var>
+<arg>${Watchlist_button}</arg>
+<arg>cursor</arg>
+<status status="PASS" start="2024-04-29T09:20:12.113680" elapsed="0.175700"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${content_c}</arg>
+<arg>pointer</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.289711" elapsed="0.000290"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:12.113121" elapsed="0.177038"/>
+</test>
+<test id="s1-t11" name="TC_10 Button Back to Top" line="149">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-29T09:20:12.291095" level="INFO">Executing JavaScript:
+window.scrollBy(0, 5000)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.290717" elapsed="0.096317"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@aria-label='Back to top']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.387519" elapsed="0.038967"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:12.290381" elapsed="0.136364"/>
+</test>
+<test id="s1-t12" name="Post-conditions" line="153">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-29T09:20:12.427351" elapsed="0.070039"/>
+</kw>
+<status status="PASS" start="2024-04-29T09:20:12.426985" elapsed="0.071121"/>
+</test>
+<status status="PASS" start="2024-04-29T09:20:03.811374" elapsed="8.687715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="12" fail="0" skip="0" id="s1" name="TS CSS">TS CSS</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -61,11 +61,18 @@ TC_6 Italian Lang
 TC_7 Portugal Lang
     • Verify that the website content is displayed in Portuguese language.
 
-    1. Open a new browser session and ensure cookies are cleared.
-    2. Check if the language selector indicates 'PT'.
-    3. Click on the Portuguese language option.
-    4. Ensure that the carousel titles, recommendations, and exclusives are visible.
-    5. Verify that the page language attribute is set to 'pt'.
+    1. Check if the language selector indicates 'PT'.
+    2. Click on the Portuguese language option.
+    3. Ensure that the carousel titles, recommendations, and exclusives are visible.
+    4. Verify that the page language attribute is set to 'pt'.
+
+TC_8 Spanish Lang
+    • Verify that the website content is displayed in Spanish language.
+
+    1. Check if the language selector indicates 'ES'.
+    2. Click on the Spanish language option.
+    3. Ensure that the carousel titles, recommendations, and exclusives are visible.
+    4. Verify that the page language attribute is set to 'es'.
 ________________________________________________________
 Post-conditions:
     Close Browser
@@ -74,12 +81,12 @@ ________________________________________________________
 
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../variables/Browser.robot
-Resource    ../variables/URLs.robot
-Resource    ../variables/RadioButtons.robot
-Resource    ../variables/HomepageElements.robot
-Resource    ../variables/Inputs.robot
-Resource    ../keywords/Keywords.robot
+Resource    ../../variables/Browser.robot
+Resource    ../../variables/URLs.robot
+Resource    ../../variables/RadioButtons.robot
+Resource    ../../variables/HomepageElements.robot
+Resource    ../../variables/Inputs.robot
+Resource    ../../keywords/Keywords.robot
 
 *** Variables ***
 ${text1} =      Regie
@@ -163,7 +170,6 @@ TC_6 Italian Lang
     Should Contain    ${lang}    it
 
 TC_7 Portugal Lang
-    Open Browser Clickout Cookies
     ${language}=    Get Text    ${LanguageSelector}
     IF    $language != "PT"
         Click Element    ${LanguageSelector}

@@ -45,8 +45,7 @@ TC_4: Heading Link
     2. Give it some time after the load.
     3. Use a JS command to scroll down the page.
     4. Give it some time to be scrolled.
-    5. The page should contain the specific heading
-    element.
+    5. The page should contain the specific heading element.
     6. Click on the heading element.
     7. Verify if the URL contains the word 'top-picks'.
 
@@ -55,30 +54,45 @@ TC_5: Menu Link
     and contain clickable links.
 
     1. Run the keyword 'Open Menu'.
-    2. Click on a link with the text
-    'Browse Movies by Genre'.
+    2. Click on a link with the text 'Browse Movies by Genre'.
     3. Verify if the URL contains the word 'genre'.
 
-# TC_6: Image Link
-#     • Now the page should be on Genres.
-#     • Clicking on an image element should redirect to
-#     a specific page.
+TC_6: Search Bar Redirection
+    • Verify that the search bar redirects correctly.
 
-#     1. Click on the image element.
-#     2. Verify if the page contains the text
-#     'Top 50 Crime Movies and TV Shows'.
+    1. Enter a valid search query (e.g., “The Shawshank Redemption”) into the search bar.
+    2. Click the search button.
+    3. Confirm that the search results page loads.
 
-# TC_7: Icon Link
-#     • Now the page should contain a list of 50 movies.
-#     • Every movie has a title, an image, rating, and
-#     clickable icon 'Add to Watchlist'.
+TC_7: Footer Links
+    • Test footer links (e.g., “About,” “Contact Us,” “Privacy Policy”).
 
-#     1. Wait until the page contains the first clickable icon.
-#     2. Give it some time to load.
-#     3. Click on the element.
-#     4. The user is not logged in, so it redirects to
-#     the signin page that should contain the title 'Sign in'.
-#     5. Verify if the URL contains the word 'signin'.
+    1. Click on a footer link (e.g., “About IMDb”).
+    2. Verify that the corresponding page opens.
+    3. Check if the URL matches the expected path.
+
+TC_8: User Profile Redirection
+    • Confirm that user profiles redirect correctly.
+
+    1. Log in to access your user profile.
+    2. Click on your profile picture or username.
+    3. Verify that your profile page opens.
+    4. Check if the URL contains your username.
+
+TC_9: External Links
+    • Test external links (e.g., social media icons, IMDb Pro).
+
+    1. Click on an external link (e.g., IMDb’s Twitter handle).
+    2. Verify that the external page opens in a new tab.
+    3. Check if the URL corresponds to the expected social media profile.
+
+TC_10: Error Page Redirection
+    • Validate redirection to error pages (e.g., 404 Not Found).
+
+    1. Manually enter an invalid URL (e.g., https://www.imdb.com/invalid-page).
+    2. Verify that the error page loads.
+    3. Check if the URL contains relevant error codes (e.g., “404”).
+
 ________________________________________________________
 Post-conditions:
     Close the browser.
@@ -88,11 +102,11 @@ ________________________________________________________
 *** Settings ***
 Library     SeleniumLibrary
 Library     OperatingSystem
-Resource    ../variables/Browser.robot
-Resource    ../variables/URLs.robot
-Resource    ../variables/Inputs.robot
-Resource    ../variables/HomepageElements.robot
-Resource    ../keywords/Keywords.robot
+Resource    ../../variables/Browser.robot
+Resource    ../../variables/URLs.robot
+Resource    ../../variables/Inputs.robot
+Resource    ../../variables/HomepageElements.robot
+Resource    ../../keywords/Keywords.robot
 
 
 *** Test Cases ***
@@ -108,8 +122,7 @@ TC_2 Logo Redirection
     Location Should Contain    home
 
 TC_3 Span Link
-    Wait Until Page Contains Element    //span[normalize-space()='Get more recommendations']
-    Execute Javascript    window.scrollBy(0, 1000)
+    Execute Javascript    window.scrollBy(0, 500)
     Sleep    .2
     Click Element    //span[normalize-space()='Get more recommendations']
     Location Should Contain    what-to-watch
@@ -117,7 +130,7 @@ TC_3 Span Link
 TC_4 Heading Link
     Click Element    //a[@id='home_img_holder']
     Sleep    .2
-    Execute Javascript    window.scrollBy(0, 1000)
+    Execute Javascript    window.scrollBy(0, 500)
     Sleep    .2
     Wait Until Page Contains Element    //h3[normalize-space()='Top picks']
     Click Element    //h3[normalize-space()='Top picks']

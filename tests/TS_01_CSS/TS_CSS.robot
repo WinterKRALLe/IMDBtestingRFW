@@ -78,10 +78,10 @@ ________________________________________________________
 *** Settings ***
 Library     SeleniumLibrary
 Library     Collections
-Resource    ../variables/Browser.robot
-Resource    ../variables/URLs.robot
-Resource    ../variables/Inputs.robot
-Resource    ../keywords/Keywords.robot
+Resource    ../../variables/Browser.robot
+Resource    ../../variables/URLs.robot
+Resource    ../../variables/Inputs.robot
+Resource    ../../keywords/Keywords.robot
 
 
 *** Variables ***
@@ -110,7 +110,7 @@ TC_2 Text Color
     ...    //h3[normalize-space()='Featured today']
     ...    color
     Log    ${color}
-    Should Contain    ${color}    rgb(245, 197, 24)
+    Should Contain    ${color}    rgba(245, 197, 24, 1)
 
 TC_3 Font Size
     ${font_size}=    Get CSS Property Value    //h3[normalize-space()='Featured today']    font-size
@@ -133,7 +133,7 @@ TC_6 Menu Flex Wrap
     Close Menu
 
 TC_7 Button Border Radius
-    Execute Javascript    window.scrollTo(0, 2000);
+    Execute Javascript    window.scrollBy(0, 2000)
     Wait Until Element Is Visible    ${Watchlist_button}    timeout=10s
     ${border_r}=    Get CSS Property Value    ${Watchlist_button}    border-radius
     Should Be Equal    ${border_r}    4px

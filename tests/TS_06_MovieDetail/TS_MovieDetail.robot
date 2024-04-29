@@ -60,8 +60,8 @@ ________________________________________________________
 
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../keywords/Keywords.robot
-Resource    ../variables/Inputs.robot
+Resource    ../../keywords/Keywords.robot
+Resource    ../../variables/Inputs.robot
 
 *** Test Cases ***
 Pre-conditions

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on linux)" generated="2024-04-29T08:58:37.119492" rpa="false" schemaversion="5">
+<suite id="s1" name="TS MovieDetail" source="/home/winter/robot/IMDBtestingRFW/tests/TS_MovieDetail/TS_MovieDetail.robot">
+<test id="s1-t1" name="Pre-conditions" line="67">
+<kw name="Open Browser Clickout Cookies" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:37.273642" level="INFO">Opening browser 'Chrome' to base url 'https://www.imdb.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-29T08:58:37.273456" elapsed="2.648499"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T08:58:39.922286" elapsed="0.294312"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:40.217196" level="INFO">Clicking button '//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']'.</msg>
+<arg>//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T08:58:40.216897" elapsed="0.181641"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-04-29T08:58:40.398759" elapsed="0.482638"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:37.272915" elapsed="3.608651"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:40.882180" level="INFO">Clicking element '//input[@id='suggestion-search']'.</msg>
+<arg>${Searchbar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T08:58:40.881847" elapsed="0.062939"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:40.945502" level="INFO">Typing text 'Guardians of the Galaxy' into text field '//input[@id='suggestion-search']'.</msg>
+<arg>${Searchbar}</arg>
+<arg>Guardians of the Galaxy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T08:58:40.945135" elapsed="0.144423"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//li[@id='react-autowhatever-navSuggestionSearch--item-0']/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-29T08:58:41.089800" elapsed="0.234790"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:41.325041" level="INFO">Clicking element '//li[@id='react-autowhatever-navSuggestionSearch--item-0']/a'.</msg>
+<arg>//li[@id='react-autowhatever-navSuggestionSearch--item-0']/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T08:58:41.324838" elapsed="2.938245"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:37.272550" elapsed="6.990845"/>
+</test>
+<test id="s1-t2" name="TC_1 Movie Title" line="74">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.399497" level="INFO">Current page contains element '//h1[@class='sc-d8941411-0 khgJYk']/span[@class='hero__primary-text']'.</msg>
+<arg>//h1[@class='sc-d8941411-0 khgJYk']/span[@class='hero__primary-text']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.263933" elapsed="0.135708"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.263675" elapsed="0.136245"/>
+</test>
+<test id="s1-t3" name="TC_2 Movie Rating" line="77">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.509337" level="INFO">Current page contains element '//div[@class='sc-3a4309f8-0 bjXIAP sc-b7c53eda-1 iIQkEw']//div[@class='sc-acdbf0f3-1 kCTJoV'][normalize-space()='IMDb RATING']'.</msg>
+<arg>//div[@class='sc-3a4309f8-0 bjXIAP sc-b7c53eda-1 iIQkEw']//div[@class='sc-acdbf0f3-1 kCTJoV'][normalize-space()='IMDb RATING']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.400665" elapsed="0.108813"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.400216" elapsed="0.109619"/>
+</test>
+<test id="s1-t4" name="TC_3 Movie Relese Year" line="80">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.580684" level="INFO">Current page contains element '//a[normalize-space()='Release date']'.</msg>
+<arg>//a[normalize-space()='Release date']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.510647" elapsed="0.070158"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.510177" elapsed="0.070908"/>
+</test>
+<test id="s1-t5" name="TC_4 Movie Duration" line="83">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.605488" level="INFO">Current page contains element '//ul[@class='ipc-inline-list ipc-inline-list--show-dividers sc-d8941411-2 cdJsTz baseAlt']/li[@role='presentation']'.</msg>
+<arg>//ul[@class='ipc-inline-list ipc-inline-list--show-dividers sc-d8941411-2 cdJsTz baseAlt']/li[@role='presentation']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.581821" elapsed="0.023831"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.581392" elapsed="0.024555"/>
+</test>
+<test id="s1-t6" name="TC_5 Movie Genre" line="86">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.635415" level="INFO">Current page contains element '//div[@class='ipc-chip-list--baseAlt ipc-chip-list']'.</msg>
+<arg>//div[@class='ipc-chip-list--baseAlt ipc-chip-list']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.606506" elapsed="0.029099"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.606155" elapsed="0.029822"/>
+</test>
+<test id="s1-t7" name="TC_6 Movie Director" line="89">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.666616" level="INFO">Current page contains element '//div[@class='sc-b7c53eda-3 vXcqY']//span[@aria-label='See full cast and crew'][normalize-space()='Director']'.</msg>
+<arg>//div[@class='sc-b7c53eda-3 vXcqY']//span[@aria-label='See full cast and crew'][normalize-space()='Director']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.636696" elapsed="0.030037"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.636236" elapsed="0.030749"/>
+</test>
+<test id="s1-t8" name="TC_7 Movie Cast" line="92">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.700846" level="INFO">Current page contains element '//div[@data-testid='title-cast-header']'.</msg>
+<arg>//div[@data-testid='title-cast-header']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.667559" elapsed="0.033396"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.733893" level="INFO">Current page contains element '//div[@class='ipc-shoveler ipc-shoveler--base ipc-shoveler--page0 title-cast__grid']'.</msg>
+<arg>//div[@class='ipc-shoveler ipc-shoveler--base ipc-shoveler--page0 title-cast__grid']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.701160" elapsed="0.032821"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.667278" elapsed="0.066887"/>
+</test>
+<test id="s1-t9" name="TC_8 Movie Storyline" line="96">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.768238" level="INFO">Current page contains element '//div[@data-testid='storyline-header']'.</msg>
+<arg>//div[@data-testid='storyline-header']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.734820" elapsed="0.033602"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.734439" elapsed="0.034296"/>
+</test>
+<test id="s1-t10" name="TC_9 Movie Reviews" line="99">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T08:58:44.810688" level="INFO">Current page contains element '//div[@data-testid='reviews-header']'.</msg>
+<arg>//div[@data-testid='reviews-header']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.769725" elapsed="0.041123"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.769115" elapsed="0.042065"/>
+</test>
+<test id="s1-t11" name="Post-conditions" line="102">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-29T08:58:44.812086" elapsed="0.069854"/>
+</kw>
+<status status="PASS" start="2024-04-29T08:58:44.811572" elapsed="0.070699"/>
+</test>
+<status status="PASS" start="2024-04-29T08:58:37.120095" elapsed="7.762552"/>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="11" fail="0" skip="0" id="s1" name="TS MovieDetail">TS MovieDetail</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

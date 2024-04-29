@@ -1,2 +1,2 @@
 *** Variables ***
-${Browser}      firefox
+${Browser}      Chrome

@@ -76,10 +76,10 @@ ________________________________________________________
 
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../variables/Browser.robot
-Resource    ../variables/URLs.robot
-Resource    ../variables/Login.robot
-Resource    ../keywords/Keywords.robot
+Resource    ../../variables/Browser.robot
+Resource    ../../variables/URLs.robot
+Resource    ../../variables/Login.robot
+Resource    ../../keywords/Keywords.robot
 
 
 *** Variables ***

@@ -57,6 +57,41 @@ TC_6 Search Director
     1. Enter the director's name "Christopher Nolan" into the search bar.
     2. Click the search button.
     3. Verify that the page contains an image of Christopher Nolan at an event for "Inception (2010)".
+
+TC_7 Search by Genre
+    • Test searching for movies by genre.
+
+    1. Click the “Genres” menu item.
+    2. Select a specific genre (e.g., “Action,” “Comedy,” “Drama”).
+    3. Verify that the page displays relevant movies within the chosen genre.
+
+TC_8 Search by Release Year
+    • Validate searching for movies released in a specific year.
+        
+    1. Enter a valid release year (e.g., “1994”) in the search bar.
+    2. Click the search button.
+    3. Check if movies released in that year are listed.
+
+TC_9 Search by Actor and Director Together
+    • Confirm that combined searches return relevant results.
+      
+    1. Enter both an actor’s name (“Tom Hanks”) and a director’s name (“Christopher Nolan”) in the search bar.
+    2. Click the search button.
+    3. Verify that the page displays relevant content related to both the actor and director.
+
+TC_10 Search by Partial Title
+    • Test searching with a partial movie title.
+       
+    1. Enter a partial title (e.g., “Shawshank”) in the search bar.
+    2. Click the search button.
+    3. Ensure that movies with titles containing the partial text are included in the results.
+
+TC_11 Search by TV Shows
+    • Verify that searching for TV shows returns relevant results.
+
+    1. Enter a TV show title (e.g., “Breaking Bad”) in the search bar.
+    2. Click the search button.
+    3. Confirm that the page displays information related to the TV show.
 ________________________________________________________
 Post-conditions:
     Close the browser.
@@ -66,8 +101,8 @@ ________________________________________________________
 *** Settings ***
 Library     SeleniumLibrary
 Library     Collections
-Resource    ../variables/Inputs.robot
-Resource    ../keywords/Keywords.robot
+Resource    ../../variables/Inputs.robot
+Resource    ../../keywords/Keywords.robot
 
 
 *** Variables ***

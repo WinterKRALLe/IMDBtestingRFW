@@ -7,6 +7,7 @@ Resource    ../variables/URLs.robot
 *** Keywords ***
 Open Browser Clickout Cookies
     Open Browser    ${URL}    ${Browser}
+    Maximize Browser Window
     Wait Until Element Is Visible    //button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']
     Click Button    //button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']
     Wait Until Element Is Not Visible    //button[@class='icb-btn sc-bcXHqe sc-hLBbgP sc-ftTHYK dcvrLS dufgkr ecppKW']

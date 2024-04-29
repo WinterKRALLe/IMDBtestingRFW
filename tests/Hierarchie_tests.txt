@@ -1,0 +1,77 @@
+tests/
+┣ TS_01_CSS/
+  ┗ TS_CSS.robot
+    ┗ TC_1 Underline on Hover                     # 001
+    ┗ TC_2 Text Color                             # 002
+    ┗ TC_3 Font Size                              # 003
+    ┗ TC_4 Font Weight                            # 004
+    ┗ TC_5 Font Family                            # 005
+    ┗ TC_6 Menu Flex Wrap                         # 006
+    ┗ TC_7 Button Border Radius                   # 007  
+    ┗ TC_8 Button Content Center                  # 008
+    ┗ TC_9 Button Cursor Pointer                  # 009
+    ┗ TC_10 Button Back to Top                    # 010
+┣ TS_02_UserFunctionality/
+  ┗ TS_UserFunctionality.robot
+    ┗ TC_1 Add To Watchlist                       # 011
+    ┗ TC_2 Add Rating to a Movie                  # 012
+    ┗ TC_3 Sign Out                               # 013
+┣ TS_03_Language/
+  ┗ TS_Language.robot
+    ┗ TC_1 English Lang                           # 014
+    ┗ TC_2 French Lang                            # 015
+    ┗ TC_3 German Lang                            # 016
+    ┗ TC_4 German Lang Search                     # 017
+    ┗ TC_5 Hindi Lang                             # 018
+    ┗ TC_6 Italian Lang                           # 019
+    ┗ TC_7 Portugal Lang                          # 020
+    ┗ TC_8 Spanish Lang                           # 021
+┣ TS_04_Login/
+  ┗ TS_Login.robot
+    ┗ TC_1 Empty Login                            # 022
+    ┗ TC_2 Partial Login Username                 # 023
+    ┗ TC_3 Partial Login Password                 # 024
+    ┗ TC_4 Invalid Login                          # 025
+    ┗ TC_5 Valid Login with Security Alert        # 026
+    ┗ TC_6 Valid Login                            # 027
+┣ TS_05_Menu/
+  ┗ TS_Menu.robot
+    ┗ TC_1 Open Menu                              # 028
+    ┗ TC_2 Close Menu                             # 029
+    ┗ TC_3 Verify Menu                            # 030
+┣ TS_06_MovieDetail/
+  ┗ TS_MovieDetail.robot
+    ┗ TC_1 Movie Title                            # 031
+    ┗ TC_2 Movie Rating                           # 032
+    ┗ TC_3 Movie Release Year                     # 033
+    ┗ TC_4 Movie Duration                         # 034
+    ┗ TC_5 Movie Genre                            # 035
+    ┗ TC_6 Movie Director                         # 036
+    ┗ TC_7 Movie Cast                             # 037
+    ┗ TC_8 Movie Storyline                        # 038
+    ┗ TC_9 Movie Reviews                          # 039
+┣ TS_07_Redirection/
+  ┗ TS_Redirection.robot
+    ┗ TC_1: Verify Homepage URL                   # 040
+    ┗ TC_2: Logo Redirection                      # 041
+    ┗ TC_3: Span Link                             # 042
+    ┗ TC_4: Heading Link                          # 043
+    ┗ TC_5: Menu Link                             # 044
+    ┗ TC_6: Search Bar Redirection                # 045
+    ┗ TC_7: Footer Links                          # 046
+    ┗ TC_8: User Profile Redirection              # 047
+    ┗ TC_9: External Links                        # 048
+    ┗ TC_10: Error Page Redirection               # 049
+┗ TS_08_Search/
+  ┗ TS_Search.robot
+    ┗ TC_1 Valid Search Query                     # 050
+    ┗ TC_2 Invalid Search Query                   # 051
+    ┗ TC_3 Search Results                         # 052
+    ┗ TC_4 Search Movie                           # 053
+    ┗ TC_5 Search Actor                           # 054
+    ┗ TC_6 Search Director                        # 055
+    ┗ TC_7 Search by Genre                        # 056
+    ┗ TC_8 Search by Release Year                 # 057
+    ┗ TC_9 Search by Actor and Director Together  # 058
+    ┗ TC_10 Search by Partial Title               # 059
+    ┗ TC_11 Search by TV Shows                    # 060
