@@ -102,6 +102,8 @@ ________________________________________________________
 *** Settings ***
 Library     SeleniumLibrary
 Library     OperatingSystem
+Library    SeleniumLibrary
+Library    SeleniumLibrary
 Resource    ../../variables/Browser.robot
 Resource    ../../variables/URLs.robot
 Resource    ../../variables/Inputs.robot
@@ -124,11 +126,14 @@ TC_2 Logo Redirection
 TC_3 Span Link
     Execute Javascript    window.scrollBy(0, 500)
     Sleep    .2
-    Click Element    //span[normalize-space()='Get more recommendations']
+    Click Element    //a[contains(@class, 'ipc-btn') and contains(@href, '/what-to-watch')]
+
     Location Should Contain    what-to-watch
 
 TC_4 Heading Link
-    Click Element    //a[@id='home_img_holder']
+    Execute Javascript    window.scrollBy(0, 0)
+    Sleep    .5s
+    Click Element    ${LinkToHome}
     Sleep    .2
     Execute Javascript    window.scrollBy(0, 500)
     Sleep    .2

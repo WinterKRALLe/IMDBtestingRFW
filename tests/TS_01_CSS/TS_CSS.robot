@@ -76,8 +76,10 @@ ________________________________________________________
 
 
 *** Settings ***
-Library     SeleniumLibrary
 Library     Collections
+Library    String
+Library    SeleniumLibrary
+Library    SeleniumLibrary
 Resource    ../../variables/Browser.robot
 Resource    ../../variables/URLs.robot
 Resource    ../../variables/Inputs.robot
@@ -127,13 +129,13 @@ TC_5 Font Family
 TC_6 Menu Flex Wrap
     Open Menu
     ${flex_wrap}=    Get CSS Property Value
-    ...    //div[@class='sc-iNiRlI dgDhwo navlcl']
+    ...    (//div[contains(@class, 'navlcl')])[1]
     ...    flex-wrap
     Should Be Equal    ${flex_wrap}    wrap
     Close Menu
 
 TC_7 Button Border Radius
-    Execute Javascript    window.scrollBy(0, 2000)
+    Execute Javascript    window.scrollBy(0, 1000)
     Wait Until Element Is Visible    ${Watchlist_button}    timeout=10s
     ${border_r}=    Get CSS Property Value    ${Watchlist_button}    border-radius
     Should Be Equal    ${border_r}    4px

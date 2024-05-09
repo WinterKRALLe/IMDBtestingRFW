@@ -1,8 +1,7 @@
 *** Settings ***
-Library     SeleniumLibrary
+Library    SeleniumLibrary
 Resource    ../variables/Browser.robot
 Resource    ../variables/URLs.robot
-
 
 *** Keywords ***
 Open Browser Clickout Cookies
@@ -21,7 +20,7 @@ Login
     Sleep    1s
 
 Verify Valid Login
-    Wait Until Page Contains    Winter
+    Wait Until Page Contains    tosTestovani
 
 Get CSS Property Value
     [Arguments]    ${locator}    ${attribute name}

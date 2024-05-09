@@ -119,7 +119,7 @@ TC_4 Invalid Login
 
 TC_6 Valid Login
     Login    ${Username}    ${Password}
-    Sleep    1s
+    Sleep    3s
     Verify Valid Login
 
 Post-conditions
